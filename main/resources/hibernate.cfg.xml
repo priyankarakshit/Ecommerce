@@ -1,0 +1,31 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">
+    jdbc:mysql://localhost:3306/ecommercedatabase</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">*Jayanthi09?</property>
+    <property name="hibernate.connection.pool_size">10</property>
+    <property name="show_sql">true</property>
+    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+     <mapping class="com.adminportal.domain.Book"/>
+     <mapping class="com.adminportal.domain.BookToCartItem"/>
+     <mapping class="com.adminportal.domain.CartItem"/>          
+     <mapping class="com.adminportal.domain.Order"/>
+     <mapping class="com.adminportal.domain.ShoppingCart"/>
+     <mapping class="com.adminportal.domain.BillingAddress"/>
+     <mapping class="com.adminportal.domain.Payment"/>
+     <mapping class="com.adminportal.domain.ShippingAddress"/>
+     <mapping class="com.adminportal.domain.User"/>
+     <mapping class="com.adminportal.domain.UserBilling"/>
+     <mapping class="com.adminportal.domain.UserPayment"/>
+     <mapping class="com.adminportal.domain.UserShipping"/>
+     <mapping class="com.adminportal.domain.security.UserRole"/>
+      <mapping class="com.adminportal.domain.security.Role"/>
+       <mapping class="com.adminportal.domain.security.Authority"/>
+   </session-factory>
+</hibernate-configuration>
